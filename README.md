@@ -23,3 +23,5 @@
 
 ## Run livereload server
 If it's not already running start it with `npm run livereload`
+
+All you need is install a Chrome extension https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei?hl=en
