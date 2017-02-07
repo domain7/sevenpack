@@ -1,6 +1,6 @@
 import $ from 'jquery';
 
-function init(){
+function init() {
   $('div').addClass('loaded');
 }
 
