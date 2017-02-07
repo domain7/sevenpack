@@ -5,12 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm run dev & npm run svg",
+    "start": "npm run dev",
     "dev": "webpack --config webpack.config.js --watch --display-error-details -p --color",
     "livereload": "livereload dist/ --port 35729",
     "svg": "svg-sprite-generate -d src/svg -o dist/svg/sprite.svg",
     "modernizr": "customizr -c modernizr.config.json",
-    "lint": "eslint --ignore-path .gitignore src --ignore-pattern src/js/vendor"
+    "lint": "eslint --ignore-path .gitignore src --ignore-pattern src/js/vendor",
+    "sassyplate": "git clone https://github.com/domain7/sassyplate.git && mv sassyplate/styles ./src && mv sassyplate/fonts ./src && rm -rf sassyplate"
   },
   "author": "Igor Barbashin",
   "license": "ISC",
