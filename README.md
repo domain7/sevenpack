@@ -20,3 +20,6 @@
 
 ## Generate custom modernizr
 `npm run modernizr`
+
+## Run livereload server
+If it's not already running start it with `npm run livereload`
