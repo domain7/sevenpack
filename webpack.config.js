@@ -32,7 +32,10 @@ module.exports = {
             {
               loader: 'css-loader'
             }, {
-              loader: 'csso-loader'
+              loader: 'csso-loader',
+              query: {
+                comments: false
+              }
             }, {
               loader: 'postcss-loader'
             }, {
