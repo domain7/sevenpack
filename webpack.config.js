@@ -16,8 +16,8 @@ module.exports = {
         exclude: /node_modules/,
         query: {
           presets: [
-            ["es2015", {
-              "modules": false
+            ['es2015', {
+              modules: false
             }]
           ]
         }
@@ -65,4 +65,4 @@ module.exports = {
       sourceMap: true
     }),
   ],
-}
+};
