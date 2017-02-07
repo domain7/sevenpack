@@ -15,6 +15,9 @@
 
 # One time commands
 
+## Add Sassyplate
+`npm run sassyplate`
+
 ## Generate SVG sprite
 `npm run svg`
 
