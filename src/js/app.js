@@ -6,3 +6,6 @@ import '../styles/style.scss';
 
 // Import a module
 import './modules/example';
+import { randomNumber } from './modules/helpers';
+
+console.log(randomNumber);
