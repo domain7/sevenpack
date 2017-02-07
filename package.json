@@ -1,0 +1,30 @@
+{
+  "name": "sevenpack",
+  "version": "1.0.0",
+  "description": "Minimalistic Domain7 Webpack Boilerplate",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack --config webpack.config.js --watch --display-error-details -p --color & livereload dist/ --port 35729"
+  },
+  "author": "Igor Barbashin",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^6.7.2",
+    "babel-core": "^6.22.1",
+    "babel-loader": "^6.2.10",
+    "babel-preset-es2015": "^6.22.0",
+    "css-loader": "^0.26.1",
+    "csso-loader": "^0.2.1",
+    "extract-text-webpack-plugin": "^2.0.0-rc.3",
+    "livereload": "^0.6.0",
+    "node-sass": "^4.5.0",
+    "postcss-loader": "^1.2.2",
+    "sass-loader": "^5.0.0",
+    "style-loader": "^0.13.1",
+    "webpack": "^2.2.1"
+  },
+  "dependencies": {
+    "jquery": "^3.1.1"
+  }
+}
