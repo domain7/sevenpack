@@ -8,4 +8,4 @@ import '../styles/style.scss';
 import './modules/example';
 import { randomNumber } from './modules/helpers';
 
-console.log(randomNumber);
+console.log(randomNumber());
