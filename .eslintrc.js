@@ -6,5 +6,8 @@ module.exports = {
     ],
     "globals": {
       document: true
+    },
+    "rules": {
+      "comma-dangle": 0
     }
 };
