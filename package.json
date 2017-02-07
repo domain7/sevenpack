@@ -5,10 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm run dev & npm run reload & npm run svg",
+    "start": "npm run dev & npm run svg",
     "dev": "webpack --config webpack.config.js --watch --display-error-details -p --color",
-    "reload": "livereload dist/ --port 35729",
-    "svg": "svg-sprite-generate -d src/svg -o dist/svg/sprite.svg"
+    "livereload": "livereload dist/ --port 35729",
+    "svg": "svg-sprite-generate -d src/svg -o dist/svg/sprite.svg",
+    "modernizr": "customizr -c modernizr.config.json"
   },
   "author": "Igor Barbashin",
   "license": "ISC",
@@ -19,6 +20,7 @@
     "babel-preset-es2015": "^6.22.0",
     "css-loader": "^0.26.1",
     "csso-loader": "^0.2.1",
+    "customizr": "^1.0.0-alpha",
     "eslint": "^3.15.0",
     "eslint-config-airbnb": "^14.1.0",
     "eslint-plugin-import": "^2.2.0",

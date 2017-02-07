@@ -1,0 +1,19 @@
+{
+  "cache": true,
+  "devFile": "remote",
+  "dest": "src/js/vendor/modernizr-custom.js",
+  "classPrefix": "",
+  "options": [
+    "html5shiv",
+    "setClasses"
+  ],
+  "tests": [],
+  "files": {
+    "src": [
+      "src/styles/{,*/}*.scss",
+      "src/js/{,*/}*.js",
+      "!src/js/vendor/{,*/}*.js"
+    ]
+  },
+  "customTests": []
+}
