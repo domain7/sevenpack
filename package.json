@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm run dev",
-    "dev": "webpack --config webpack.config.js --watch --display-error-details -p --color",
+    "start": "webpack --config webpack.config.js --watch --display-error-details -p --color",
     "livereload": "livereload dist/ --port 35729",
     "svg": "svg-sprite-generate -d src/svg -o dist/svg/sprite.svg",
     "modernizr": "customizr -c modernizr.config.json",
