@@ -16,10 +16,12 @@
 # One time commands
 
 ## Add Sassyplate
-`npm run sassyplate`
+`npm run sassyplate`  
+Make sure to uncomment `// import '../styles/style.scss';` in `app.js`
 
 ## Generate SVG sprite
-`npm run svg`
+`npm run svg`  
+This command builds normal and minified svg sprites 
 
 ## Generate custom modernizr
 `npm run modernizr`

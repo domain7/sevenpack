@@ -8,7 +8,7 @@
     "start": "concurrently --kill-others \"npm run dev\" \"npm run livereload\"",
     "dev": "webpack --config webpack.config.js --watch --display-error-details -p --color",
     "livereload": "livereload dist/ --port 35729",
-    "svg": "svg-sprite-generate -d src/svg -o dist/svg/sprite.svg",
+    "svg": "svg-sprite-generate -d src/svg -o dist/svg/sprite.svg && svgo dist/svg/sprite.svg dist/svg/sprite.min.svg --disable=removeUselessDefs",
     "modernizr": "customizr -c modernizr.config.json",
     "lint": "eslint --ignore-path .gitignore src --ignore-pattern src/js/vendor",
     "sassyplate": "git clone https://github.com/domain7/sassyplate.git && mv sassyplate/styles ./src && mv sassyplate/fonts ./src && rm -rf sassyplate"
@@ -36,6 +36,7 @@
     "sass-loader": "^5.0.0",
     "style-loader": "^0.13.1",
     "svg-sprite-generator": "0.0.7",
+    "svgo": "^0.7.2",
     "webpack": "^2.2.1"
   },
   "dependencies": {
