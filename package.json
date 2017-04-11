@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack --config webpack.config.js --watch --display-error-details -p --color",
+    "start": "concurrently --kill-others \"npm run dev\" \"npm run livereload\"",
+    "dev": "webpack --config webpack.config.js --watch --display-error-details -p --color",
     "livereload": "livereload dist/ --port 35729",
     "svg": "svg-sprite-generate -d src/svg -o dist/svg/sprite.svg && svgo dist/svg/sprite.svg dist/svg/sprite.min.svg --disable=removeUselessDefs",
     "modernizr": "customizr -c modernizr.config.json",
@@ -19,6 +20,7 @@
     "babel-core": "^6.22.1",
     "babel-loader": "^6.2.10",
     "babel-preset-es2015": "^6.22.0",
+    "concurrently": "^3.4.0",
     "css-loader": "^0.26.1",
     "csso-loader": "^0.2.1",
     "customizr": "^1.0.0-alpha",
