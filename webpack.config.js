@@ -1,10 +1,13 @@
 const webpack = require('webpack');
+const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   entry: './src/js/app.js',
-  output: {
-    filename: './dist/bundle.js'
+  output: { // Compile into js/build.js
+    filename: 'bundle.js',
+    path: path.resolve(process.cwd(), 'dist'),
+    publicPath: '/dist/',
   },
   module: {
     rules: [
@@ -48,12 +51,38 @@ module.exports = {
           ]
         })
       },
+
+
+      // Images
+      {
+        test: /\.(jpg|png|gif)$/,
+        loaders: [
+          {
+            loader: 'file-loader',
+            query: {
+              outputPath: 'images/'
+            }
+          },
+          {
+            loader: 'image-webpack-loader',
+            query: {
+              progressive: true,
+              optimizationLevel: 7,
+              interlaced: false,
+              pngquant: {
+                quality: '65-90',
+                speed: 4,
+              },
+            },
+          },
+        ],
+      }
     ]
   },
   plugins: [
     // Extracting css into a file
     new ExtractTextPlugin({
-      filename: 'dist/styles.css',
+      filename: 'styles.css',
       allChunks: true,
     }),
 
