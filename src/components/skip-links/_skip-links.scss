@@ -1,0 +1,22 @@
+$color-canvas: black !default;
+$color-brand: blue !default;
+.skip-links {
+  &__link {
+    transition: top, .5s, ease-out, background 5s linear;
+    padding: 6px;
+    position: absolute;
+    top: -40px;
+    left: 0;
+    color: $color-canvas;
+    background: $color-brand;
+    z-index: 100;
+    &:focus {
+      position: absolute;
+      left: 0;
+      top: 0;
+      background: darken($color-brand, 20);
+      outline: 0;
+      transition: top, .5s, ease-out, background 5s linear;
+    }
+  } // &-link {
+} // .skip_links
