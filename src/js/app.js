@@ -8,4 +8,6 @@ import '../styles/style.scss';
 import './modules/example';
 
 
-import '../components/skip-links/';
+// import '../components/skip-links/';
+// import '../components/button/';
+// import '../components/form-checkbox/';
