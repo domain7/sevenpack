@@ -1,0 +1,52 @@
+$color-keyline: grey!default;
+.form-check {
+  $block: &;
+  position: relative;
+  padding-left: 25px;
+  &__control {
+    //@extend .u-screen-reader;
+    &:active + label,
+    &:focus + label {
+      &:before {
+        border-color: darken($color-keyline, 20%);
+      } // &:before
+    } // &:active + label
+    &:checked + label {
+      &:after {
+        opacity: 1;
+      } // &:after
+    } // &:checked + label
+  } // &__control
+  &__label {
+    display: inline-block;
+    &:before {
+      transition: border .1s ease-in-out;
+      content: '';
+      display: block;
+      width: 15px;
+      height: 15px;
+      border: 1px solid $color-keyline;
+      position: absolute;
+      top: 4px;
+      left: 0;
+      #{$block}--radio & {
+        border-radius: 8px;
+      } // --radio &
+    } // &:before
+    &:after {
+      transition: opacity .1s ease-in-out;
+      // @include icon($icon-check);
+      opacity: 0;
+      position: absolute;
+      left: 1px;
+      top: 4px;
+      font-size: 15px;
+      #{$block}--radio & {
+        //content: $icon-circle;
+        font-size: 9px;
+        left: 4px;
+        top: 7px;
+      } // --radio &
+    } // &:after
+  } // &__label
+} // .form-check

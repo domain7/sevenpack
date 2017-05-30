@@ -19,9 +19,13 @@
 `npm run sassyplate`  
 Make sure to uncomment `// import '../styles/style.scss';` in `app.js`
 
+## Library
+`npm run library`
+Generates KSS Node Library into `/dist/styleguide`.  You can run an HTTP server out of `/dist` to view the library.
+
 ## Generate SVG sprite
 `npm run svg`  
-This command builds normal and minified svg sprites 
+This command builds normal and minified svg sprites
 
 ## Generate custom modernizr
 `npm run modernizr`

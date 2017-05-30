@@ -11,7 +11,8 @@
     "svg": "svg-sprite-generate -d src/svg -o dist/svg/sprite.svg && svgo dist/svg/sprite.svg dist/svg/sprite.min.svg --disable=removeUselessDefs",
     "modernizr": "customizr -c modernizr.config.json",
     "lint": "eslint --ignore-path .gitignore src --ignore-pattern src/js/vendor",
-    "sassyplate": "git clone https://github.com/domain7/sassyplate.git && mv sassyplate/styles ./src && mv sassyplate/fonts ./src && rm -rf sassyplate"
+    "sassyplate": "git clone https://github.com/domain7/sassyplate.git && mv sassyplate/styles ./src && mv sassyplate/fonts ./src && rm -rf sassyplate",
+    "library": "kss --config ./kss-config.json"
   },
   "author": "Igor Barbashin",
   "license": "ISC",
@@ -32,6 +33,7 @@
     "extract-text-webpack-plugin": "^2.0.0-rc.3",
     "file-loader": "^0.11.1",
     "image-webpack-loader": "^3.3.0",
+    "kss": "^3.0.0-beta.18",
     "livereload": "^0.6.0",
     "node-sass": "^4.5.0",
     "postcss-loader": "^1.2.2",

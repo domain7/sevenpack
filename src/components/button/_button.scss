@@ -1,0 +1,31 @@
+// Button
+//
+// Buttons are for cool stuff
+//
+// Markup: button.twig
+//
+// :hover    - Highlights when hovering.
+// :disabled - Dims the button when disabled.
+// .js-button - Add JS alert
+// .button--primary  - Indicates button is the primary action.
+// .button--smaller  - A little bit smaller now.
+// .button--primary.button--smaller  - A little bit smaller now.
+//
+// Styleguide Base.Buttons
+.button {
+  background: #efefef;
+  border: solid 2px black;
+  padding: 10px;
+  line-height: 1;
+  font-size: 16px;
+
+  &--alt {
+    background: blue;
+  }
+  &--primary {
+    background: green;
+  }
+  &--smaller {
+    font-size: 10px;
+  }
+}
