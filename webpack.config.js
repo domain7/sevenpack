@@ -16,40 +16,25 @@ module.exports = {
       {
         test: /\.js$/,
         loader: 'babel-loader',
-        exclude: /node_modules/,
+        // This excludes all node_modules from your babel-loader but includes dom7 and swiper
+        exclude: /node_modules\/(?!(dom7|swiper)\/).*/,
         query: {
           presets: [
-            ['es2015', {
-              modules: false
-            }]
+            ['es2015', { modules: false }]
           ]
         }
       },
 
       // SCSS
       {
-        test: /\.scss$/,
-        loader: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: [
-            {
-              loader: 'css-loader'
-            }, {
-              loader: 'csso-loader',
-              query: {
-                comments: false
-              }
-            }, {
-              loader: 'postcss-loader'
-            }, {
-              loader: 'sass-loader',
-              query: {
-                sourceMap: true,
-                sourceMapContents: true
-              }
-            }
-          ]
-        })
+        test: /\.(css|scss)$/,
+        use: [
+          { loader: 'style-loader', options: { sourceMap: true } },
+          { loader: 'css-loader', options: { sourceMap: true } },
+          { loader: 'postcss-loader', options: { sourceMap: true } },
+          { loader: 'sass-loader', options: { sourceMap: true } },
+          //{ loader: 'kss-loader', options: { config: './kss-config.json' } }
+        ]
       },
 
 
@@ -79,22 +64,22 @@ module.exports = {
       },
 
       // KSS Node Library
-      {
-        test: /\.(scss)$/,
-        exclude: /(node_modules)/,
-        use: {
-          loader: 'kss-loader',
-          options: {
-            // title: 'KSS Example',
-            // mask: '*.scss|*.css',
-            // placeholder: '[modifier class]',
-            // source: './scss/',
-            // destination: './docs/',
-            // homepage: './../README.md'
-            config: './kss-config.json'
-          }
-        }
-      }
+//      {
+//         test: /\.(scss)$/,
+//         exclude: /(node_modules)/,
+//         use: {
+//           loader: 'kss-loader',
+//           options: {
+//             // title: 'KSS Example',
+//             // mask: '*.scss|*.css',
+//             // placeholder: '[modifier class]',
+//             // source: './scss/',
+//             // destination: './docs/',
+//             // homepage: './../README.md'
+//             config: './kss-config.json'
+//           }
+//         }
+//       }
     ]
   },
 
