@@ -1,0 +1,28 @@
+// Carousel
+//
+// A carousel using swiper
+//
+// Markup: carousel.twig
+//
+// Styleguide Components.Carousel
+.image-fit {
+  position: relative;
+  width: 50%;
+  padding-bottom: 25%;
+
+  img {
+    height: 100%;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  &--portrait {
+    border: solid 1px blue;
+    width: 33%;
+    padding-bottom: 50%;
+  }
+
+}
