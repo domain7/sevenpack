@@ -7,13 +7,11 @@ import '../../js/fold';
 const higlightedElements = $('.js-example-fold--highlight');
 
 function onSmall(){
-  console.log('on');
   higlightedElements.fold();
 }
 
 function offSmall(){
   higlightedElements.fold('restore');
-  console.log('off');
 }
 
 onSmall();

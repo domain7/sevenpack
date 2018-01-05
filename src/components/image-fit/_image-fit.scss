@@ -4,6 +4,8 @@
 //
 // Markup: image-fit.twig
 //
+// .image-fit--portrait - portrait
+//
 // Styleguide Components.ImageFit
 .image-fit {
   position: relative;
@@ -17,6 +19,12 @@
     position: absolute;
     top: 0;
     width: 100%;
+  }
+
+  &--portrait {
+    border: solid 1px blue;
+    width: 33%;
+    padding-bottom: 50%;
   }
 
 }
