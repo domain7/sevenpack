@@ -76,9 +76,28 @@ module.exports = {
             },
           },
         ],
+      },
+
+      // KSS Node Library
+      {
+        test: /\.(scss)$/,
+        exclude: /(node_modules)/,
+        use: {
+          loader: 'kss-loader',
+          options: {
+            // title: 'KSS Example',
+            // mask: '*.scss|*.css',
+            // placeholder: '[modifier class]',
+            // source: './scss/',
+            // destination: './docs/',
+            // homepage: './../README.md'
+            config: './kss-config.json'
+          }
+        }
       }
     ]
   },
+
   plugins: [
     // Extracting css into a file
     new ExtractTextPlugin({
