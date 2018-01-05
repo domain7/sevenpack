@@ -1,4 +1,5 @@
 // Tell webpack to compile SASS
+// if this errors: npm run sassyplate
 import '../styles/style.scss';
 
 // Import modernizr
@@ -6,6 +7,9 @@ import '../styles/style.scss';
 
 // Import a module
 import './modules/example';
+
+import '../components/image-fit';
+import '../components/example-fold';
 
 
 // import '../components/skip-links/';

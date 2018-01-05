@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import './_button.scss';
 
-$('.js-button').on('click', function(){
-  alert('button clicked');
+$('.js-button').on('click', () => {
+  console.log('button clicked');
 });
