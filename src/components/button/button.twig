@@ -1,2 +1,1 @@
- <button class="button {{modifier_class}}">Button{{text}}</button>
- <a href="#" class="button {{modifier_class}}">Button{{text}}</a>
+<{{element|default('button')}} {%if href %} href="{{href}}"{% endif %}class="button {{modifier_class}}">{{text | default('Button')}}</{{element|default('button')}}>
