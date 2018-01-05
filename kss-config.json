@@ -4,8 +4,8 @@
     "./src/components"
   ],
   "destination":  "dist/styleguide/",
-  "builder": "./node_modules/kss/builder/twig",
-
+  "//": "./node_modules/kss/builder/twig",
+  "builder": "./node_modules/kss-offscreen-twig",
   "//": "The css and js paths are URLs relative to the generated style guide.",
   "css": [
     "../styles.css"
